@@ -3,316 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#7959ad">
+<meta name="theme-color" content="#0b0f17">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Cosplay Craft Manager</title>
 <link rel="manifest" href="./manifest.webmanifest">
-  
-/* Cosplay Craft Manager v1.3
-   Theme D — TECH BLUE
-   No background images, no hero slogan
-*/
-:root {
-  color-scheme: dark;
-  --bg: #0b0f17;
-  --panel: #111827;
-  --accent: #00e5ff;
-  --accent2: #38bdf8;
-  --text: #e6f1ff;
-  --line: #194759;
-}
-
-html {
-  background: var(--bg);
-}
-
-body {
-  background: #0b0f17 !important;
-  color: var(--text) !important;
-  min-height: 100dvh;
-}
-
-header {
-  background: #0a131def !important;
-  border-bottom: 1px solid #12556a !important;
-  box-shadow: 0 2px 18px #00e5ff0a;
-}
-
-h1 {
-  color: #a5f6ff !important;
-  text-shadow: 0 0 14px #00e5ff32;
-  letter-spacing: .1px;
-}
-
-h2, h3, .node-title {
-  color: #e6f1ff;
-}
-
-small, .muted, .hint, .subtle {
-  color: #95b5c6 !important;
-}
-
-.card, .panel {
-  background: linear-gradient(145deg, #111e2b, #0e1722) !important;
-  color: var(--text) !important;
-  border: 1px solid #18536a !important;
-  box-shadow: 0 6px 24px #0006 !important;
-}
-
-.card .card {
-  background: #0b1824 !important;
-  border-color: #21495b !important;
-}
-
-.hero {
-  background: #0e1b29 !important;
-  border: 1px solid #00cde64d !important;
-  color: var(--text) !important;
-}
-
-.hero small, .hero .muted {
-  color: #8fbacb !important;
-}
-
-.btn {
-  background: linear-gradient(115deg, #008ca9, #00cbe5) !important;
-  color: #03131b !important;
-  border: 1px solid #27e5fa !important;
-  box-shadow: 0 0 12px #00d9f52c !important;
-}
-
-.btn.alt {
-  background: #122b3c !important;
-  color: #9df4ff !important;
-  border: 1px solid #1d637b !important;
-  box-shadow: none !important;
-}
-
-.btn.warn, .btn.danger {
-  background: #391d2c !important;
-  color: #ffabb8 !important;
-  border-color: #77384e !important;
-  box-shadow: none !important;
-}
-
-.btn:focus-visible,
-.project-tile:focus-visible,
-.nav button:focus-visible {
-  outline: 2px solid #00e5ff;
-  outline-offset: 3px;
-}
-
-.pill {
-  background: #0c3041 !important;
-  color: #82f4ff !important;
-  border: 1px solid #1b6576;
-}
-
-.bar {
-  background: #1d3949 !important;
-}
-
-.bar > div {
-  background: linear-gradient(90deg, #00b9d9, #00e5ff) !important;
-  box-shadow: 0 0 14px #00e5ff77;
-}
-
-.nav {
-  background: #08121df2 !important;
-  border: 1px solid #15536b !important;
-  box-shadow: 0 0 25px #00e5ff13 !important;
-}
-
-.nav button {
-  color: #8ea8b8 !important;
-}
-
-.nav button.active {
-  color: #00e5ff !important;
-  text-shadow: 0 0 10px #00e5ff88;
-}
-
-.item, .node-line {
-  border-top-color: #204151 !important;
-}
-
-.titlelink {
-  color: #a5f6ff !important;
-}
-
-.project-tile {
-  color: #e6f1ff !important;
-}
-
-.field input,
-.field select,
-.field textarea,
-.node-select {
-  background: #0b1b28 !important;
-  color: #e6f1ff !important;
-  border: 1px solid #2a5a6c !important;
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-  outline: 2px solid #00e5ff !important;
-  border-color: #00e5ff !important;
-}
-
-.check {
-  accent-color: #00d9ed !important;
-}
-
-.indent, .node-nest, .nested {
-  border-left-color: #236078 !important;
-}
-
-.cal-week, .week {
-  color: #8bb5c5 !important;
-}
-
-.cal-day, .day {
-  background: #0c1c2a !important;
-  color: #e6f1ff !important;
-  border-color: #1a3e52 !important;
-}
-
-.cal-day.blank, .day.blank {
-  background: transparent !important;
-  border-color: transparent !important;
-}
-
-.cal-day.today, .day.today {
-  background: #0d3b4e !important;
-  border-color: #00e5ff !important;
-  color: #a8f8ff !important;
-}
-
-.cal-day.selected, .day.selected {
-  outline-color: #00e5ff !important;
-}
-
-.cal-dot, .dot {
-  background: #00e5ff !important;
-}
-
-.cal-dot.event, .dot.event {
-  background: #e59dff !important;
-}
-
-.modal {
-  background: #010710c9 !important;
-}
-
-a {
-  color: #65eaff !important;
-}
-
-#toast {
-  background: #133849 !important;
-  color: #e6f1ff !important;
-}
-
-.empty {
-  color: #91b5c7 !important;
-}
-
-::placeholder {
-  color: #7696a6;
-  opacity: 1;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .btn, .card, .cal-day, .day {
-    transition: border-color .15s ease, transform .15s ease;
-  }
-
-  .btn:active, .cal-day:active, .day:active {
-    transform: scale(.98);
-  }
-}
-
 <style>
 :root{
-  --bg:#f7f5fb;--card:#fff;--text:#302a3e;
-  --muted:#888095;--primary:#7959ad;--soft:#f0eafb;
-  --border:#eae5f2;--red:#bf5265;--green:#368c73;
+  color-scheme:dark;
+  --bg:#0b0f17;--card:#111d2b;--card2:#0e1825;
+  --text:#e6f1ff;--muted:#8eaebe;--cyan:#00e5ff;
+  --blue:#38bdf8;--line:#1c485a;--red:#ff8299;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);
   font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",sans-serif}
 button,input,select,textarea{font:inherit}
 button{cursor:pointer}
-header{position:sticky;top:0;z-index:5;background:#ffffffed;
-  backdrop-filter:blur(15px);padding:16px;border-bottom:1px solid var(--border)}
-h1{font-size:19px;margin:0;color:#594078}
-h2{font-size:20px;margin:0 0 13px}
+header{position:sticky;top:0;z-index:5;background:#0a131df2;
+  backdrop-filter:blur(18px);padding:16px;border-bottom:1px solid var(--line)}
+h1{font-size:19px;margin:0;color:#a5f6ff;letter-spacing:.2px}
+h2{font-size:19px;margin:0 0 12px}
 h3{font-size:16px;margin:0 0 10px}
 small,.muted{color:var(--muted)}
-main{max-width:850px;margin:auto;padding:17px 14px 120px}
-.card{background:var(--card);border:1px solid var(--border);
-  border-radius:21px;padding:17px;margin-bottom:14px;
-  box-shadow:0 7px 24px #4732670c}
-.hero{background:linear-gradient(120deg,#7354aa,#ad8bd5);color:white}
-.hero small{color:#f1e9ff}
+main{max-width:850px;margin:auto;padding:17px 14px 125px}
+.card{background:linear-gradient(145deg,#111e2b,#0e1722);
+  border:1px solid var(--line);border-radius:19px;padding:17px;
+  margin-bottom:14px;box-shadow:0 7px 25px #0004}
 .row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
 .between{justify-content:space-between}
-.btn{border:0;border-radius:12px;background:var(--primary);
-  color:white;padding:10px 13px;font-weight:650}
-.btn.alt{background:var(--soft);color:#674b95}
-.btn.danger{background:#fff0f1;color:var(--red)}
+.btn{border:1px solid #28dff3;border-radius:11px;
+  background:linear-gradient(115deg,#008da9,#00d4e9);
+  color:#03151d;padding:10px 13px;font-weight:700}
+.btn.alt{background:#132b3b;color:#9df4ff;
+  border-color:#28637a}
+.btn.danger{background:#351b2a;color:#ffb2c0;
+  border-color:#71364a}
 .btn.sm{padding:7px 10px;font-size:12px}
-.pill{background:var(--soft);color:#674d96;
-  border-radius:30px;padding:5px 9px;font-size:12px}
-.bar{height:9px;border-radius:20px;background:#eee9f5;overflow:hidden;margin:9px 0}
-.bar div{height:100%;background:linear-gradient(90deg,#b59ae4,#7959ad)}
-.item{padding:12px 0;border-top:1px solid #f0edf5}
+.pill{background:#103344;color:#84f4ff;
+  border:1px solid #23647a;border-radius:30px;
+  padding:5px 9px;font-size:12px}
+.bar{height:9px;border-radius:20px;background:#1e3949;
+  overflow:hidden;margin:9px 0}
+.bar div{height:100%;background:linear-gradient(90deg,#008ba8,#00e5ff)}
+.item{padding:12px 0;border-top:1px solid #204151}
 .item:first-child{border-top:0}
 .field{display:block;margin:12px 0;font-size:13px;font-weight:650}
 .field input,.field select,.field textarea{
-  display:block;width:100%;padding:11px;border:1px solid #ddd5ea;
-  border-radius:11px;margin-top:6px;background:white;color:var(--text)}
+  display:block;width:100%;padding:11px;border:1px solid #2a596b;
+  border-radius:11px;margin-top:6px;background:#0b1b28;color:var(--text)}
 .field textarea{min-height:80px}
 .nav{position:fixed;bottom:8px;left:9px;right:9px;z-index:6;
-  display:flex;background:#fffffff2;border:1px solid var(--border);
+  display:flex;background:#08121df5;border:1px solid #15536b;
   border-radius:22px;padding:7px 3px calc(7px + env(safe-area-inset-bottom));
-  box-shadow:0 8px 30px #30204c23}
-.nav button{flex:1;min-width:0;background:none;border:0;color:#898092;
-  font-size:10px;padding:5px 1px}
-.nav button.active{color:var(--primary);font-weight:800}
+  box-shadow:0 0 25px #00e5ff13}
+.nav button{flex:1;min-width:0;background:none;border:0;
+  color:#8ea8b8;font-size:10px;padding:5px 1px}
+.nav button.active{color:var(--cyan);font-weight:800}
 .nav span{display:block;font-size:20px;margin-bottom:3px}
 .section{display:flex;justify-content:space-between;align-items:center;
   gap:10px;margin:21px 0 11px}
 .section h2{margin:0}
 .clickable{cursor:pointer}
 .clickable:active{opacity:.7}
-.check{width:22px;height:22px;accent-color:var(--primary)}
-.nested{border-left:2px solid #e9e1f5;margin-left:12px;padding-left:12px}
-.node{padding:12px 0;border-top:1px solid #eeeaf4}
+.check{width:22px;height:22px;accent-color:var(--cyan)}
+.nested{border-left:2px solid #236078;margin-left:12px;padding-left:12px}
+.node{padding:12px 0;border-top:1px solid #204151}
 .node:first-child{border-top:0}
-.node select{border:1px solid #e3daef;border-radius:9px;padding:6px;
-  background:#faf8fe;color:#624c85;font-size:12px}
-.modal{position:fixed;inset:0;z-index:20;background:#21172f9e;
+.node select{border:1px solid #2a596b;border-radius:9px;
+  padding:6px;background:#0b1b28;color:#a5f6ff;font-size:12px}
+.modal{position:fixed;inset:0;z-index:20;background:#010710d9;
   display:flex;align-items:center;justify-content:center;padding:14px}
-.panel{background:white;width:min(100%,560px);max-height:90dvh;
-  overflow:auto;border-radius:22px;padding:19px}
+.panel{background:#101d2b;border:1px solid #236078;
+  width:min(100%,560px);max-height:90dvh;overflow:auto;
+  border-radius:22px;padding:19px}
 .empty{text-align:center;color:var(--muted);padding:20px}
 .calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}
 .week{text-align:center;color:var(--muted);font-size:11px;padding:5px}
-.day{min-height:54px;background:white;border:1px solid var(--border);
-  border-radius:11px;padding:6px 2px;text-align:center;font-size:13px}
-.day.today{background:#f0e8ff;border-color:#b9a1df}
-.day.selected{outline:2px solid var(--primary)}
+.day{min-height:54px;background:#0c1c2a;border:1px solid #1a3e52;
+  border-radius:11px;padding:6px 2px;text-align:center;
+  font-size:13px;color:var(--text)}
+.day.today{background:#0d3b4e;border-color:var(--cyan)}
+.day.selected{outline:2px solid var(--cyan)}
 .day.blank{background:transparent;border-color:transparent}
 .dots{display:flex;justify-content:center;gap:3px;margin-top:7px}
-.dot{width:5px;height:5px;border-radius:50%;background:#9274c9}
-.dot.event{background:#e99aa6}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--cyan)}
+.dot.event{background:#e59dff}
 .thumb{max-width:100%;max-height:180px;border-radius:11px}
-a{color:var(--primary)}
+a{color:#65eaff}
 #toast{position:fixed;z-index:30;bottom:95px;left:50%;
-  transform:translateX(-50%);background:#342942;color:white;
+  transform:translateX(-50%);background:#133849;color:white;
   padding:12px 17px;border-radius:12px;display:none}
+button:focus-visible,input:focus-visible,select:focus-visible{
+  outline:2px solid var(--cyan);outline-offset:2px}
 </style>
 </head>
 <body>
@@ -320,7 +102,7 @@ a{color:var(--primary)}
  <div class="row between">
   <div>
    <h1>✂️ Cosplay Craft Manager</h1>
-   <small id="subtitle">好きな衣装を、少しずつ形に。</small>
+   <small id="subtitle">CRAFT CONTROL / TECH BLUE</small>
   </div>
   <span class="pill" id="saveStatus">読込中</span>
  </div>
@@ -335,11 +117,11 @@ a{color:var(--primary)}
 
 const $=s=>document.querySelector(s);
 const uid=()=>crypto.randomUUID?.()||String(Date.now()+Math.random());
-const today=()=>localDate(new Date());
 const localDate=d=>{
  const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,"0");
  return `${y}-${m}-${String(d.getDate()).padStart(2,"0")}`;
 };
+const today=()=>localDate(new Date());
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({
  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
 }[c]));
@@ -348,14 +130,13 @@ const statuses=["未着手","進行中","保留","修正中","完了"];
 const priorities=["最優先","高","中","低"];
 const categories=["衣装","ウィッグ","小道具・武器","靴・アクセサリー","メイク・カラコン"];
 const tabs=[
- ["home","🏠","ホーム"],
- ["projects","👗","制作"],
- ["masters","🎭","作品"],
- ["calendar","📅","予定"],
- ["materials","🧵","材料"],
- ["settings","⚙️","設定"]
+ ["home","⌂","ホーム"],
+ ["projects","✂","制作"],
+ ["masters","◇","作品"],
+ ["calendar","▦","予定"],
+ ["materials","▤","材料"],
+ ["settings","⚙","設定"]
 ];
-
 const blank=()=>({
  version:1,works:[],characters:[],projects:[],events:[],
  materials:[],diary:[],templates:[],trash:[],todayIds:[]
@@ -460,7 +241,8 @@ function days(d){
 function allDue(){
  const result=[];
  data.projects.forEach(p=>walk(p,n=>{
-  if(n.due&&!(n.kind==="check"?n.done:n.kind==="sub"?n.done:n.status==="完了"))
+  if(n.due&&!(n.kind==="check"||n.kind==="sub"?
+    n.done:n.status==="完了"||n.done))
    result.push({node:n,project:p});
  }));
  return result.sort((a,b)=>a.node.due.localeCompare(b.node.due));
@@ -472,7 +254,7 @@ function render(){
  $("#nav").innerHTML=tabs.map(([id,ico,label])=>
   `<button class="${tab===id?"active":""}" onclick="go('${id}')">
    <span>${ico}</span>${label}</button>`).join("");
- $("#subtitle").textContent=view?"詳細・編集":"好きな衣装を、少しずつ形に。";
+ $("#subtitle").textContent=view?"PROJECT DETAIL":"CRAFT CONTROL / TECH BLUE";
  $("#app").innerHTML=tab==="home"?home():
   tab==="projects"?projects():
   tab==="masters"?masters():
@@ -486,6 +268,7 @@ function calendarHTML(){
  const total=new Date(year,month+1,0).getDate();
  const marks={};
  data.events.forEach(e=>{
+  if(!e.date)return;
   if(!marks[e.date])marks[e.date]={};
   marks[e.date].event=true;
  });
@@ -531,10 +314,10 @@ function dateItems(d){
  }));
  if(!events.length&&!tasks.length)
   return '<div class="empty">予定はありません</div>';
- return events.map(e=>`<div class="item">🎪 ${esc(e.name)}</div>`).join("")+
+ return events.map(e=>`<div class="item">◇ ${esc(e.name)}</div>`).join("")+
  tasks.map(({n,p})=>`<div class="item">
   <button class="btn sm alt" onclick="go('projects','${p.id}')">
-   📌 ${esc(n.name)} · ${esc(p.name)}</button></div>`).join("");
+   ▸ ${esc(n.name)} · ${esc(p.name)}</button></div>`).join("");
 }
 
 /* ホーム */
@@ -549,19 +332,23 @@ function home(){
  }));
  const next=[...data.events].filter(e=>days(e.date)>=0)
   .sort((a,b)=>a.date.localeCompare(b.date))[0];
- return `<div class="card hero">
-  <small>MY CREATIVE WORKSPACE</small>
-  <h2 style="margin-top:9px">今日も、理想の衣装に一歩近づこう ✨</h2>
-  <div class="row between">
-   <span>制作中 ${active.length} 件</span>
-   <button class="btn sm" style="background:white;color:#7053a0"
-    onclick="openProject()">＋ 衣装を追加</button>
-  </div></div>
-  ${next?`<div class="card"><small>次のイベントまで</small>
-   <h2>${days(next.date)}日</h2>
+ return `<div class="section"><h2>CONTROL DASHBOARD</h2>
+  <button class="btn sm" onclick="openProject()">＋ 衣装</button></div>
+  <div class="card">
+   <div class="row between">
+    <div><small>ACTIVE PROJECTS</small>
+    <h2 style="font-size:30px;color:#8cf5ff;margin:5px 0">${active.length}</h2></div>
+    <div><small>ALL PROJECTS</small>
+    <h2 style="font-size:30px;margin:5px 0">${data.projects.length}</h2></div>
+    <div><small>DEADLINES</small>
+    <h2 style="font-size:30px;margin:5px 0">${due.length}</h2></div>
+   </div>
+  </div>
+  ${next?`<div class="card"><small>NEXT EVENT</small>
+   <h2 style="color:var(--cyan);font-size:28px;margin:8px 0">${days(next.date)} DAYS</h2>
    <b>${esc(next.name)}</b> · ${fmt(next.date)}</div>`:""}
-  <div class="section"><h2>📅 カレンダー</h2>
-   <button class="btn sm alt" onclick="go('calendar')">予定を見る</button></div>
+  <div class="section"><h2>CALENDAR</h2>
+   <button class="btn sm alt" onclick="go('calendar')">すべての予定</button></div>
   ${calendarHTML()}
   <div class="section"><h2>今日の作業</h2></div>
   <div class="card">${tasks.length?tasks.map(({n,p})=>`
@@ -570,7 +357,7 @@ function home(){
     <div style="flex:1"><b>${esc(n.name)}</b><br>
     <small>${esc(p.name)}</small></div></div>`).join(""):
    '<div class="empty">今日の作業はありません</div>'}</div>
-  <div class="section"><h2>⚠️ 期限が近い作業</h2></div>
+  <div class="section"><h2>期限が近い作業</h2></div>
   <div class="card">${due.length?due.slice(0,10).map(({node:n,project:p})=>`
    <div class="item row between">
     <div><b>${esc(n.name)}</b><br>
@@ -579,15 +366,15 @@ function home(){
       `toggle('${n.id}')`:`go('projects','${p.id}')`}">
       ${n.kind==="check"?"✓ 完了":"開く"}</button></div>`).join(""):
    '<div class="empty">期限が近い作業はありません</div>'}</div>
-  <div class="section"><h2>👗 制作中の衣装</h2>
-   <button class="btn sm alt" onclick="go('projects')">すべて見る</button></div>
+  <div class="section"><h2>制作中の衣装</h2>
+   <button class="btn sm alt" onclick="go('projects')">一覧</button></div>
   ${active.map(projectCard).join("")||
    '<div class="card empty">衣装を登録してみよう！</div>'}`;
 }
 
 /* 作品・キャラクター */
 function masters(){
- return `<div class="section"><h2>🎭 作品・キャラクター</h2></div>
+ return `<div class="section"><h2>作品・キャラクター</h2></div>
  <div class="card"><div class="row">
  <button class="btn" onclick="simpleForm('works','作品')">＋ 作品</button>
  <button class="btn alt" onclick="characterForm()">＋ キャラクター</button>
@@ -597,7 +384,7 @@ function masters(){
    <button class="btn sm alt" onclick="simpleForm('works','作品','${w.id}')">編集</button>
   </div>
   ${data.characters.filter(c=>c.workId===w.id).map(c=>`
-   <div class="item row between"><span>🎭 ${esc(c.name)}</span>
+   <div class="item row between"><span>◇ ${esc(c.name)}</span>
    <button class="btn sm alt" onclick="characterForm('${c.id}')">編集</button>
    </div>`).join("")||'<div class="empty">キャラクター未登録</div>'}
  </div>`).join("")||'<div class="card empty">まず作品を登録してください</div>'}`;
@@ -609,12 +396,12 @@ function projectCard(p){
   role="button" tabindex="0"
   onkeydown="if(event.key==='Enter')go('projects','${p.id}')">
   <div class="row between">
-   <h3 style="margin:0">👗 ${esc(p.name)}</h3>${badge(p.status)}
+   <h3 style="margin:0">▸ ${esc(p.name)}</h3>${badge(p.status)}
   </div>
   <small>${esc(projectLabel(p))}</small>
   ${percent(p)}
   <div class="row between"><small>${p.due?"期限 "+fmt(p.due):"期限未設定"}</small>
-  <span style="color:var(--primary)">工程を見る ›</span></div>
+  <span style="color:var(--cyan)">工程を見る ›</span></div>
  </div>`;
 }
 function projects(){
@@ -649,7 +436,7 @@ function detail(p){
   <button class="btn sm" onclick="addNode('${p.id}')">＋ 制作対象</button></div>
  ${kids(p).map(n=>`<div class="card">${nodeHTML(n,0)}</div>`).join("")||
   '<div class="card empty">制作対象を追加してください</div>'}
- <div class="card"><h3>🖼️ 参考画像・URL</h3>
+ <div class="card"><h3>参考画像・URL</h3>
   <input type="file" accept="image/*"
    onchange="addImage(event,'${p.id}')">
   <p><small>画像は縮小して端末内に保存されます。</small></p>
@@ -664,7 +451,7 @@ function detail(p){
    <button class="btn sm danger" onclick="deleteReference('${p.id}','${u.id}')">削除</button>
   </div>`).join("")}
  </div>
- <div class="card"><h3>📔 作業日誌</h3>
+ <div class="card"><h3>作業日誌</h3>
   <button class="btn sm alt" onclick="diaryForm('${p.id}')">＋ 記録</button>
   ${data.diary.filter(d=>d.projectId===p.id).map(d=>`
    <div class="item"><b>${fmt(d.date)} ${esc(d.text)}</b>
@@ -807,6 +594,7 @@ function addNode(parentId){
   field("名前","name","","text",true)+commonFields({}),f=>{
    const n=makeNode(f.get("name"),kind);
    n.status=f.get("status");
+   n.done=kind==="process"&&n.status==="完了";
    n.priority=f.get("priority");
    n.due=f.get("due");
    parent.children=parent.children||[];
@@ -842,8 +630,7 @@ function toggle(id){
  if(n.kind==="target"||n.kind==="project")return;
  const next=!isDone(n);
  n.done=next;
- if(n.kind==="process"||n.kind==="check")
-  n.status=next?"完了":"未着手";
+ if(n.kind==="process")n.status=next?"完了":"未着手";
  save();render();
 }
 function changeStatus(id,status){
@@ -891,7 +678,7 @@ function removeEntity(key,id){
 
 /* イベント */
 function calendarPage(){
- return `<div class="section"><h2>📅 イベント・予定</h2>
+ return `<div class="section"><h2>イベント・予定</h2>
   <button class="btn sm" onclick="eventForm()">＋ イベント</button></div>
   ${calendarHTML()}
   <div class="card"><h3>登録イベント</h3>
@@ -928,7 +715,7 @@ function eventForm(id){
 
 /* 材料 */
 function materialsPage(){
- return `<div class="section"><h2>🧵 材料・在庫</h2>
+ return `<div class="section"><h2>材料・在庫</h2>
   <button class="btn sm" onclick="materialForm()">＋ 材料</button></div>
   <div class="card"><small>割当は予約量です。実際に使用したときだけ在庫を減らします。</small>
   ${data.materials.map(m=>{
@@ -1014,9 +801,9 @@ async function addImage(e,id){
   canvas.width=Math.round(img.width*scale);
   canvas.height=Math.round(img.height*scale);
   canvas.getContext("2d").drawImage(img,0,0,canvas.width,canvas.height);
-  get("projects",id).images.push({
-   id:uid(),src:canvas.toDataURL("image/jpeg",.82)
-  });
+  const p=get("projects",id);
+  p.images=p.images||[];
+  p.images.push({id:uid(),src:canvas.toDataURL("image/jpeg",.82)});
   img.close?.();
   await save();render();
  }catch(err){alert("画像を追加できませんでした: "+err.message)}
@@ -1024,7 +811,7 @@ async function addImage(e,id){
 function deleteImage(id,imgId){
  if(!confirm("画像を削除しますか？"))return;
  const p=get("projects",id);
- p.images=p.images.filter(i=>i.id!==imgId);
+ p.images=(p.images||[]).filter(i=>i.id!==imgId);
  save();render();
 }
 function addReference(id){
@@ -1036,12 +823,14 @@ function addReference(id){
   const u=new URL(url);
   if(!["https:","http:"].includes(u.protocol))throw Error();
  }catch{return alert("http/httpsのURLを入力してください")}
- get("projects",id).urls.push({id:uid(),title,url});
+ const p=get("projects",id);
+ p.urls=p.urls||[];
+ p.urls.push({id:uid(),title,url});
  save();render();
 }
 function deleteReference(id,refId){
  const p=get("projects",id);
- p.urls=p.urls.filter(x=>x.id!==refId);
+ p.urls=(p.urls||[]).filter(x=>x.id!==refId);
  save();render();
 }
 function diaryForm(projectId,id){
@@ -1073,7 +862,7 @@ function templateFrom(id){
 
 /* 設定・バックアップ・ゴミ箱 */
 function settings(){
- return `<div class="section"><h2>⚙️ 設定・データ保護</h2></div>
+ return `<div class="section"><h2>設定・データ保護</h2></div>
  <div class="card"><h3>JSONバックアップ</h3>
   <p><small>画像を含めて書き出します。iCloud Driveなどに保存してください。</small></p>
   <button class="btn" onclick="backup()">JSONを書き出す</button>
@@ -1097,7 +886,7 @@ function settings(){
   </div>`).join("")||'<div class="empty">ゴミ箱は空です</div>'}
  </div>
  <div class="card"><h3>アプリについて</h3>
-  <p>Cosplay Craft Manager v1.2</p>
+  <p>Cosplay Craft Manager v1.3 / TECH BLUE</p>
   <small>保存先：iPhone内のIndexedDB。Safariのサイトデータ削除などで
    消える可能性があります。定期的にバックアップしてください。</small>
  </div>`;
