@@ -7,6 +7,232 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Cosplay Craft Manager</title>
 <link rel="manifest" href="./manifest.webmanifest">
+  
+/* Cosplay Craft Manager v1.3
+   Theme D — TECH BLUE
+   No background images, no hero slogan
+*/
+:root {
+  color-scheme: dark;
+  --bg: #0b0f17;
+  --panel: #111827;
+  --accent: #00e5ff;
+  --accent2: #38bdf8;
+  --text: #e6f1ff;
+  --line: #194759;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  background: #0b0f17 !important;
+  color: var(--text) !important;
+  min-height: 100dvh;
+}
+
+header {
+  background: #0a131def !important;
+  border-bottom: 1px solid #12556a !important;
+  box-shadow: 0 2px 18px #00e5ff0a;
+}
+
+h1 {
+  color: #a5f6ff !important;
+  text-shadow: 0 0 14px #00e5ff32;
+  letter-spacing: .1px;
+}
+
+h2, h3, .node-title {
+  color: #e6f1ff;
+}
+
+small, .muted, .hint, .subtle {
+  color: #95b5c6 !important;
+}
+
+.card, .panel {
+  background: linear-gradient(145deg, #111e2b, #0e1722) !important;
+  color: var(--text) !important;
+  border: 1px solid #18536a !important;
+  box-shadow: 0 6px 24px #0006 !important;
+}
+
+.card .card {
+  background: #0b1824 !important;
+  border-color: #21495b !important;
+}
+
+.hero {
+  background: #0e1b29 !important;
+  border: 1px solid #00cde64d !important;
+  color: var(--text) !important;
+}
+
+.hero small, .hero .muted {
+  color: #8fbacb !important;
+}
+
+.btn {
+  background: linear-gradient(115deg, #008ca9, #00cbe5) !important;
+  color: #03131b !important;
+  border: 1px solid #27e5fa !important;
+  box-shadow: 0 0 12px #00d9f52c !important;
+}
+
+.btn.alt {
+  background: #122b3c !important;
+  color: #9df4ff !important;
+  border: 1px solid #1d637b !important;
+  box-shadow: none !important;
+}
+
+.btn.warn, .btn.danger {
+  background: #391d2c !important;
+  color: #ffabb8 !important;
+  border-color: #77384e !important;
+  box-shadow: none !important;
+}
+
+.btn:focus-visible,
+.project-tile:focus-visible,
+.nav button:focus-visible {
+  outline: 2px solid #00e5ff;
+  outline-offset: 3px;
+}
+
+.pill {
+  background: #0c3041 !important;
+  color: #82f4ff !important;
+  border: 1px solid #1b6576;
+}
+
+.bar {
+  background: #1d3949 !important;
+}
+
+.bar > div {
+  background: linear-gradient(90deg, #00b9d9, #00e5ff) !important;
+  box-shadow: 0 0 14px #00e5ff77;
+}
+
+.nav {
+  background: #08121df2 !important;
+  border: 1px solid #15536b !important;
+  box-shadow: 0 0 25px #00e5ff13 !important;
+}
+
+.nav button {
+  color: #8ea8b8 !important;
+}
+
+.nav button.active {
+  color: #00e5ff !important;
+  text-shadow: 0 0 10px #00e5ff88;
+}
+
+.item, .node-line {
+  border-top-color: #204151 !important;
+}
+
+.titlelink {
+  color: #a5f6ff !important;
+}
+
+.project-tile {
+  color: #e6f1ff !important;
+}
+
+.field input,
+.field select,
+.field textarea,
+.node-select {
+  background: #0b1b28 !important;
+  color: #e6f1ff !important;
+  border: 1px solid #2a5a6c !important;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid #00e5ff !important;
+  border-color: #00e5ff !important;
+}
+
+.check {
+  accent-color: #00d9ed !important;
+}
+
+.indent, .node-nest, .nested {
+  border-left-color: #236078 !important;
+}
+
+.cal-week, .week {
+  color: #8bb5c5 !important;
+}
+
+.cal-day, .day {
+  background: #0c1c2a !important;
+  color: #e6f1ff !important;
+  border-color: #1a3e52 !important;
+}
+
+.cal-day.blank, .day.blank {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+.cal-day.today, .day.today {
+  background: #0d3b4e !important;
+  border-color: #00e5ff !important;
+  color: #a8f8ff !important;
+}
+
+.cal-day.selected, .day.selected {
+  outline-color: #00e5ff !important;
+}
+
+.cal-dot, .dot {
+  background: #00e5ff !important;
+}
+
+.cal-dot.event, .dot.event {
+  background: #e59dff !important;
+}
+
+.modal {
+  background: #010710c9 !important;
+}
+
+a {
+  color: #65eaff !important;
+}
+
+#toast {
+  background: #133849 !important;
+  color: #e6f1ff !important;
+}
+
+.empty {
+  color: #91b5c7 !important;
+}
+
+::placeholder {
+  color: #7696a6;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn, .card, .cal-day, .day {
+    transition: border-color .15s ease, transform .15s ease;
+  }
+
+  .btn:active, .cal-day:active, .day:active {
+    transform: scale(.98);
+  }
+}
+
 <style>
 :root{
   --bg:#f7f5fb;--card:#fff;--text:#302a3e;
